@@ -15,3 +15,15 @@ table, th, td {
 #buttoncontainer {
   text-align: center;
 }
+
+#piechart {
+  display: inline-block;
+}
+
+#barchart {
+  display: inline-block;
+}
+
+#block {
+  margin: auto;
+}
