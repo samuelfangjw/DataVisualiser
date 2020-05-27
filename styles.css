@@ -1,0 +1,17 @@
+#table {
+  width: 60%;
+  margin: auto;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+#input {
+  text-align: center;
+}
+
+#buttoncontainer {
+  text-align: center;
+}

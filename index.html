@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="adddata.js"></script>
+</head>
+<body>
+  <table id='table'>
+    <tr>
+      <th>Activity</th>
+      <th>Time From</th>
+      <th>Time To</th>
+    </tr>
+  </table>
+  <div id='input'>
+    I did
+    <input type="text" id="activity" placeholder="Enter Activity Here">
+    from
+    <input type="time" step="60" id="timefrom">
+    to
+    <input type="time" step='60' id="timeto">
+    <button id="add">Add Data</button>
+  </div>
+  <div id="buttoncontainer">
+    <button id="generate">Visualise Data!</button>
+  </div>
+</body>
+</html>
