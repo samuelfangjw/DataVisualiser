@@ -91,14 +91,18 @@ function drawPieChart() {
 
   var pieoptions = {
     title: 'Pie Chart',
+    titleTextStyle: { fontSize: 20},
     height: 300,
     width: 500,
   };
 
   var baroptions = {
     title: 'Bar Chart',
+    titleTextStyle: { fontSize: 20},
     width: 700,
     height: 300,
+    //to hide the lengend
+    legend: {position: 'none'}
   };
 
   var piechart = new google.visualization.PieChart(document.getElementById('piechart'));
