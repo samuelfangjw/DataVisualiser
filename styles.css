@@ -1,6 +1,20 @@
+/* 
+#f7fdc3
+#d1f1fd
+#ffda81
+#d8d8d8
+#e9c7ff
+*/
+
+body {
+  background-color: #d1f1fd;
+}
+
 #table {
   width: 60%;
   margin: auto;
+  margin-top: 50px;
+  font-size: large;
 }
 
 table, th, td {
@@ -8,12 +22,51 @@ table, th, td {
   border-collapse: collapse;
 }
 
+th, td {
+  vertical-align: middle;
+  padding: 15px;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color:	#f7fdc3;
+}
+
+tr:nth-child(odd) {
+  background-color: #ffda81;
+}
+
+th {
+  background-color: #ffda81;
+  /* color: white; */
+}
+
 #input {
   text-align: center;
+  margin: 30px;
+  font-size: x-large;
+}
+
+input{
+  padding: 10px 15px;
+  margin: auto 10px;
+  border-radius: 5px;
+}
+
+#add {
+  padding: 10px 15px;
+  background: #ffda81;
+  border-radius: 5px;
 }
 
 #buttoncontainer {
   text-align: center;
+}
+
+#generate {
+  padding: 20px 30px;
+  background: #ffda81;
+  border-radius: 5px;
 }
 
 #piechart {
@@ -27,3 +80,4 @@ table, th, td {
 #block {
   margin: auto;
 }
+
