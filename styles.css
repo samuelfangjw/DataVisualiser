@@ -69,15 +69,8 @@ input{
   border-radius: 5px;
 }
 
-#piechart {
-  display: inline-block;
-}
-
-#barchart {
-  display: inline-block;
-}
-
-#block {
-  margin: auto;
+#error {
+  text-align: center;
+  margin: 15px auto;
 }
 

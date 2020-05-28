@@ -39,8 +39,16 @@ function add_activity(activity_val, timefrom_val, timeto_val) {
 };
 
 function generate_data () {
-    localStorage.setItem('array', JSON.stringify(array));
-    window.location.href = "visualiser.html";
+    if (array.length < 1) {
+        const error = document.getElementById('error');
+        error.innerHTML = '';
+        const msg = document.createElement('p');
+        msg.textContent = 'Please add some data!'
+        error.appendChild(msg);
+    } else {
+        localStorage.setItem('array', JSON.stringify(array));
+        window.location.href = "visualiser.html";
+    }
 }
 
 add.addEventListener("click", add_data);

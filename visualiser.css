@@ -1,0 +1,11 @@
+#piechart {
+  display: inline-block;
+}
+
+#barchart {
+  display: inline-block;
+}
+
+#block {
+  margin: auto;
+}
