@@ -6,7 +6,7 @@ const array = [['Activity', 'Start Time', 'End Time']];
 const pie_array = [['Task', 'Hours per Day']];
 const bar_array = [['Task', 'Hours per Day', {role: 'style'}]];
 const raw_array = JSON.parse(localStorage.getItem("array"));
-const length = raw_array.length;
+let length = raw_array.length;
 const colors = [
   "#3366cc",
   "#dc3912",
@@ -62,10 +62,24 @@ for(let i = 1; i <= length; i++) {
   const temp_arr = array[i];
   const activity = temp_arr[0];
   const time_spent = Math.abs(temp_arr[1] - temp_arr[2]) / 36e5;
-  pie_array.push([activity, time_spent]);
+  let index = 0;
+  for (j = 1; j <= i - 1; j++) {
+    if (array[j][0] == activity) {
+        index = j;
+        break;
+    }
+  }
+  if (index == 0) {
+    pie_array.push([activity, time_spent]);
+  } else {
+    pie_array[index][1] += time_spent;
+  }
+  
 }
 
-for (let i = 1; i <= length; i++){ 
+length = pie_array.length;
+
+for (let i = 1; i < length; i++){ 
   const temp_arr = pie_array[i];
   const activity = temp_arr[0];
   const time_spent = temp_arr[1];
