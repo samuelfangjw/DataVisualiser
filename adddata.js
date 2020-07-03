@@ -1,3 +1,12 @@
+$(document).ready(function(){
+    $('#timefrom').mdtimepicker({
+        hourPadding: true,
+    });
+    $('#timeto').mdtimepicker({
+        hourPadding: true,
+    });
+  });
+
 const table = document.getElementById('table');
 const activity = document.getElementById('activity');
 const timefrom = document.getElementById('timefrom');
@@ -31,10 +40,17 @@ function add_data () {
 }
 
 function add_activity(activity_val, timefrom_val, timeto_val) {
-    const hours1 = timefrom_val.split(":")[0];
-    const minutes1 = timefrom_val.split(":")[1];
-    const hours2 = timeto_val.split(":")[0];
+    var hours1 = timefrom_val.split(":")[0];
+    const minutes1 = timefrom_val.split(":")[1].split(" ")[0];
+    if (timefrom_val.split(":")[1].split(" ")[1] == "PM") {
+        hours1 = "" + (parseInt(hours1) + 12);
+    }
+    var hours2 = timeto_val.split(":")[0].split(" ")[0];
     const minutes2 = timeto_val.split(":")[1];
+    if (timeto_val.split(":")[1].split(" ")[1] == "PM") {
+        hours2 = "" + (parseInt(hours2) + 12);
+    }
+    
     array.push([activity_val, hours1, minutes1, hours2, minutes2]);
 };
 

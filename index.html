@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data Visualiser</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="mdtimepicker.css">
+  <script type="text/javascript" src="mdtimepicker.js"></script>
   <script defer src="adddata.js"></script>
 </head>
 <body>
@@ -19,9 +22,9 @@
     I did
     <input type="text" id="activity" placeholder="Enter Activity Here">
     from
-    <input type="time" step="60" id="timefrom">
+    <input type="text" id="timefrom" placeholder="Enter Time Here"/>
     to
-    <input type="time" step='60' id="timeto">
+    <input type="text" id="timeto" placeholder="Enter Time Here">
     <button id="add">Add Data</button>
   </div>
   <div id="buttoncontainer">
