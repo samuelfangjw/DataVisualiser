@@ -17,7 +17,7 @@ const activity = document.getElementById("activity");
 const timefrom = document.getElementById("timefrom");
 const timeto = document.getElementById("timeto");
 const add = document.getElementById("addGreyed");
-const generate = document.getElementById("generate");
+const generate = document.getElementById("generateGreyed");
 const dataSnackbar = document.getElementById("snackbar");
 const addSnackbar = document.getElementById("snackbar2");
 
@@ -39,7 +39,7 @@ function create_row(activity_val, timefrom_val, timeto_val) {
 
 function add_data() {
   if (add.id == "add") {
-    const activity_value = activity.value;
+    const activity_value = activity.value.trim();
     const timefrom_value = timefrom.value;
     const timeto_value = timeto.value;
     const row = create_row(activity_value, timefrom_value, timeto_value);
@@ -47,6 +47,7 @@ function add_data() {
     add_activity(activity_value, timefrom_value, timeto_value);
     add.id = "addGreyed";
     activity.value = "";
+    generate.id = "generate"
   } else {
     addSnackbar.className = "show";
     setTimeout(function(){ addSnackbar.className = addSnackbar.className.replace("show", ""); }, 3000);
@@ -79,7 +80,7 @@ function generate_data() {
 }
 
 function checkValid() {
-  if (activity.value != "" && timefrom.value != "" && timeto.value != "") {
+  if (activity.value.trim() != "" && timefrom.value != "" && timeto.value != "") {
     console.log("Hi");
     add.id = "add";
   } else {

@@ -82,6 +82,14 @@ input{
   border-radius: 5px;
 }
 
+#generateGreyed {
+  padding: 20px 30px;
+  background: #ffda81;
+  border-radius: 5px;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 #error {
   text-align: center;
   margin: 15px auto;
